@@ -1,0 +1,104 @@
+@import '../imports.sass'
+
+nav
+	margin-bottom: 0 !important
+	position: absolute
+	top: -70px
+	z-index: 9999
+	font-weight: 700
+	letter-spacing: 2px
+	box-shadow: 0 0 10px #292929
+	
+	.navbar-right
+		padding-right: 15px
+
+	ul
+		min-height: $navbar-height
+
+		*
+			height: $navbar-height
+
+	li
+		margin: 0 10px
+
+		&.active a::after
+
+			@media (min-width: $screen-sm)
+				width: 100%
+
+			@media (max-width: $screen-sm - 1)
+				height: 75%
+
+	.navbar-brand
+		margin-left: 0 !important
+		padding: 10px 15px
+		position: relative
+		color: #777
+		text-transform: none
+		text-decoration: none
+		
+		img
+			display: inline-block
+			height: 50px
+			border: 2px solid $blue
+			border-radius: 50%
+
+		// img,
+		// span
+		// 	display: inline-block
+
+		// img
+		// 	max-height: $navbar-height - 20px
+		// 	left: 15
+
+		// 	@include y-center
+
+		// span
+		// 	position: relative
+		// 	left: $navbar-height * 0.8
+
+	a
+		display: table-cell !important
+		vertical-align: middle
+		height: 100%
+		padding-top: 0
+		padding-bottom: 0
+		position: relative
+		// color: #d6d68f !important
+		text-transform: uppercase
+
+		@include transition(all 0.3s ease)
+
+		&:hover
+			color: $blue !important
+
+	.navbar-right a
+		&::after
+			content: ''
+			// display: block
+			position: absolute
+			background: $blue
+
+			@include transition(all 0.3s ease)
+
+			@media (min-width: $screen-sm)
+				width: 0
+				height: 5px
+				bottom: 0
+
+				@include x-center
+
+			@media (max-width: $screen-sm - 1)
+				width: 5px
+				height: 0
+				left: 0
+				top: 0
+
+				@include y-center
+
+		&:hover::after
+			@media (min-width: $screen-sm)
+				width: 100%
+
+			@media (max-width: $screen-sm - 1)
+				height: 75%

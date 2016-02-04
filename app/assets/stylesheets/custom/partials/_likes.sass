@@ -1,0 +1,54 @@
+@import '../imports.sass'
+
+#likes
+	a
+		margin: 10px
+		padding: 10px
+		position: relative
+		// border: 1px solid $blue
+		text-align: center
+		overflow: hidden
+		
+		+transition(all 0.3s)
+			
+		div
+			position: absolute
+			
+			@for $i from 0 through 5
+				&.div#{$i}
+					background: $blue
+			
+			&.div0,
+			&.div1
+				width: 0
+				height: 1px
+				
+				+x-center
+				
+			&.div0,
+			&.div2,
+			&.div4
+				top: 0
+				
+			&.div1,
+			&.div3,
+			&.div5
+				bottom: 0
+				
+			&.div2,
+			&.div3,
+			&.div4,
+			&.div5
+				width: 1px
+				height: 0
+				
+			&.div2,
+			&.div3
+				left: 0
+				
+			&.div4,
+			&.div5
+				right: 0
+		
+	img
+		width: 100%

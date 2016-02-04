@@ -1,0 +1,66 @@
+@import 'variables.sass'
+
+=x-center
+	position: absolute
+	left: 50%
+
+	-ms-transform: translateX(-50%)
+	-webkit-transform: translateX(-50%)
+	-moz-transform: translateX(-50%)
+	-o-transform: translateX(-50%)
+	transform: translateX(-50%)
+
+=y-center
+	position: absolute
+	top: 50%
+
+	-ms-transform: translateY(-50%)
+	-webkit-transform: translateY(-50%)
+	-moz-transform: translateY(-50%)
+	-o-transform: translateY(-50%)
+	transform: translateY(-50%)
+
+=xy-center
+	position: absolute
+	left: 50%
+	top: 50%
+
+	-ms-transform: translate(-50%, -50%)
+	-webkit-transform: translate(-50%, -50%)
+	-moz-transform: translate(-50%, -50%)
+	-o-transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%)
+
+=box-sizing
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+=transition($transition...)
+	-ms-transition:     $transition
+	-moz-transition:    $transition
+	-webkit-transition: $transition
+	-o-transition:      $transition
+	transition:         $transition
+
+=transform($transform)
+	-ms-transform:     $transform
+	-moz-transform:    $transform
+	-webkit-transform: $transform
+	-o-transform:      $transform
+	transform:         $transform
+
+
+// Mixins for slideshow arrows
+=arrow
+	display: inline-block
+	width: 20px
+	height: 3px
+	background: $dark-grey
+	border-radius: 5px
+
+	+transition(all 0.3s ease)
+	// +arrow-shadow(rgba(200, 200, 200, 0.7))
+
+=arrow-shadow($color)
+	box-shadow: 0 0 10px $color

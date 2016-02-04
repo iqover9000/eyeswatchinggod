@@ -1,0 +1,52 @@
+@import '../imports.sass'
+
+#about
+	.col-sm-3
+		padding-right: 0
+		text-transform: uppercase
+		font-weight: 700
+		letter-spacing: 2px
+		
+		div
+			margin-bottom: 20px
+			// padding: 15px 0
+			position: relative
+			
+			&::after
+				content: ''
+				// display: block
+				position: absolute
+				background: $blue
+				width: 5px
+				height: 0
+				right: 0
+				top: 0
+
+				@include y-center
+				@include transition(all 0.3s ease)
+	
+			&:hover::after
+				height: 100%
+				
+			a
+				display: block
+				padding: 15px 0
+				
+		.toggled::after
+			height: 100%
+		
+	.col-sm-9
+		border-left: 1px solid $blue
+		
+		@media (min-width: 768px)
+			margin-left: -1px
+			
+	ul
+		padding: 0
+		list-style: none
+
+.tab-pane .row
+	margin-bottom: 20px
+	
+	.col-sm-4
+		text-transform: uppercase

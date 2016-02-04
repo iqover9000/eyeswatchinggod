@@ -1,1 +1,184 @@
-<h1>Hello World</h1>
+<header>
+	
+	<canvas id="arc" width="500px" height="500px"></canvas>
+		
+	<%= image_tag("joe.jpeg") %>
+
+	<div class="name">Joe "Jody" Starks</div>
+	
+	<div class="background"></div>
+	
+</header>
+
+<section id="about">
+	
+	<h1>About</h1>
+	
+	<div class="row">
+		
+		<div class="col-sm-3">
+			
+			<div role="presentation" class="active toggled" id="bio-div"><a href="#bio" aria-controls="bio" role="tab" data-toggle="tab">Biography</a></div>
+			<div role="presentation" id="over-div"><a href="#over" aria-controls="over" role="tab" data-toggle="tab">Overview</a></div>
+			
+		</div>
+		
+		<div class="col-sm-9 tab-content">
+			
+			<div role="tabpanel" class="tab-pane active fade in" id="bio">
+				<p>Hi, mah name is Joe Starks, butchoo can call me Jody. Ah live wid mah wife Janie in a small town in Florida called Eatonville. Ah lahks tuh think o' mahself as a smart, indepen't, and charmin' man. Mah wife musta seen dat in me from de moment she met me. Ah'm also an entruhpruhneur and Ah knows mah way around bidness.</p>
+				<p>Ah been searchin' all mah life fo' someplace tuh have mah big voice and find mah fortune, and Ah finally found it here in Eatonville. The townsfolks are mighty glad Ah come along since dere wasn't nothin' dere befo' Ah was. Ah don't like tuh pat mahself on de back, but I guess you could say Ah made dis town what it is. Ah built the sto' and put in the lamp pos'. Ah even got mahself elected mayah! Them townsfolks wasn't even fixin' tuh have a mayah 'til Ah come along. Some o' dem don't lahk what Ah'm doin' wid de town, but Ah gots more sense den dey do. Ah knows what Ah'm doin'. Dey's gonna have tuh help me if dey want dis town tuh be a bustlin' city.</p>
+				<p>Mah wife, she sho is a fine woman. Much too fine tuh be stuck wid dat old man Killicks. Ah'm glad Ah saved her from him, and she is too. Dat old man, he was fixin' tuh have her split fahrwood! Dat ain't no kind o' work for a woman, 'specially one o' her class. Enuff about Killicks dough, back tuh mah wife. She gots long, gojis black hair and de most beautiful face Ah've evah seen. De only problem is de men think de same thang. Ah gots tuh have mah wife cover her hair cuz dem menfolks are always tryin' to touch it. Ah don't lahk how dey try to play checkers wid her and talk wid her too. She's mah wife, not deirs. Ah love mah woman wid all mah heart and Ah gots tuh keep her safe from de menfolks.</p>
+			</div>
+			
+			<div role="tabpanel" class="tab-pane fade" id="over">
+				<div class="row">
+					<div class="col-sm-4">Places He's Lived</div>
+					<div class="col-sm-8">Eatonville, Florida</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">Relationships</div>
+					<div class="col-sm-8">Janie Mae Crawford (married)</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">Life Events</div>
+					<div class="col-sm-8">
+						<ul>
+							<li>Married Janie Mae Crawford</li>
+							<li>Moved to Eatonville, Florida</li>
+							<li>Established a store in Eatonville, Florida</li>
+							<li>Became mayor of Eatonville, Florida</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</section>
+
+<script>
+	$('#bio a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	});
+	
+	$('#over a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	});
+	
+	$('#bio-div').click(function() {
+		$(this).addClass('toggled')
+		$('#over-div').removeClass('toggled')
+	});
+	
+	$('#over-div').click(function() {
+		$(this).addClass('toggled')
+		$('#bio-div').removeClass('toggled')
+	});
+</script>
+
+<section id="photos">
+	
+	<h1>Photos</h1>
+	
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+  	
+    <div class="item active">
+      <img src="https://i.ytimg.com/vi/teUi8N5ZaNs/hqdefault.jpg">
+      <div class="carousel-caption"></div>
+    </div>
+    
+    <div class="item">
+      <img src="http://theireyeswerewatchinggod-b.weebly.com/uploads/4/5/3/4/45344273/8389906_orig.jpg">
+      <div class="carousel-caption"></div>
+    </div>
+    
+    <div class="item">
+    	<img src="http://users.stlcc.edu/mfuller/Thornhill/3ThornhillOld.jpg">
+    	<div class="carousel-caption"></div>
+    </div>
+    
+    <div class="item">
+    	<img src="http://cdn.moviestillsdb.com/sm/14bd864a13a805e1240a476135676134/their-eyes-were-watching-god.jpg">
+    	<div class="carousel-caption"></div>
+    </div>
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+	
+</section>
+
+<section id="likes">
+	
+	<h1>Likes</h1>
+	
+	<div class="row">
+		
+		<a class="col-lg-3 col-md-4 col-sm-6" id="a0" href="#">
+			<!--<img src="https://placehold.it/320x180">-->
+			How to Keep Men Off of Your Girl
+			<% for i in 0..5 do %>
+				<div class="div<%= i %>"></div>
+			<% end %>
+		</a>
+		
+		<a class="col-lg-3 col-md-4 col-sm-6" id="a1" href="#">
+			<!--<img src="https://placehold.it/320x180">-->
+			101 Tips for New Mayors
+			<% for i in 0..5 do %>
+				<div class="div<%= i %>"></div>
+			<% end %>
+		</a>
+		
+		<a class="col-lg-3 col-md-4 col-sm-6" id="a2" href="#">
+			<!--<img src="https://placehold.it/320x180">-->
+			How to Get Whatever You Want
+			<% for i in 0..5 do %>
+				<div class="div<%= i %>"></div>
+			<% end %>
+		</a>
+		
+		<a class="col-lg-3 col-md-4 col-sm-6" id="a3" href="#">
+			<!--<img src="https://placehold.it/320x180">-->
+			Show Everyone You're a Real Man
+			<% for i in 0..5 do %>
+				<div class="div<%= i %>"></div>
+			<% end %>
+		</a>
+		
+		<a class="col-lg-3 col-md-4 col-sm-6" id="a4" href="#">
+			<!--<img src="https://placehold.it/320x180">-->
+			Make Your Voice Heard
+			<% for i in 0..5 do %>
+				<div class="div<%= i %>"></div>
+			<% end %>
+		</a>
+		
+		
+	</div>
+	
+</section>

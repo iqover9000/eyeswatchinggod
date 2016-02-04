@@ -3,17 +3,23 @@
 <html>
 	
 	<head>
-		<title>Their Eyes Were Watching God</title>
+		<title>Joe "Jody" Starks</title>
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag    'application-bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag    'application-custom', media: 'all', 'data-turbolinks-track' => true %>
+		
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+		<script src="http://www.greensock.com/js/src/utils/SplitText.min.js"></script>
+		
 		<%= csrf_meta_tags %>
 	</head>
 	
-	<body>
+	<body data-spy="scroll" data-target="#bs-example-navbar-collapse-1" data-offset="70" id="top">
 	
 		<div class="container-fluid">
 
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="1">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" id="navToggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -22,16 +28,17 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<span>Their Eyes Were Watching God</span>
+						<a class="navbar-brand" href="#top">
+							<%= image_tag("joe.jpeg") %>
+							Joe "Jody" Starks
+						</a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="/home">Home</a></li>
-							<li><a href="/facts">Facts</a></li>
-							<li><a href="/indoors">Indoors</a></li>
-							<li><a href="/outdoors">Outdoors</a></li>
-							<li><a href="/why">Why</a></li>
+							<li><a href="#about" class="scroll">About</a></li>
+							<li><a href="#photos" class="scroll">Photos</a></li>
+							<li><a href="#likes" class="scroll">Likes</a></li>
 						</ul>
 					</div>
 				</div>
@@ -45,11 +52,11 @@
 
 			</div>
 
-			<footer class="row">
+			<!--<footer class="row">-->
 
 				
 
-			</footer>
+			<!--</footer>-->
 
 		</div>
 	
